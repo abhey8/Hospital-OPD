@@ -504,8 +504,11 @@ GitHub: [@Aashish-Jha-11](https://github.com/Aashish-Jha-11)
 *Subham Sangwan*  
 GitHub: [@Subham-KRLX](https://github.com/Subham-KRLX)
 
-*Hari Krushn*  
+*Harikrushn*  
 GitHub: [@Harikrushn9118](https://github.com/Harikrushn9118)
+
+*Abhey Dua*  
+GitHub: @[abhey8](https://github.com/abhey8)
 
 ---
 
