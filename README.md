@@ -2,7 +2,6 @@
 
 	⁠A revolutionary healthcare platform that combines cutting-edge AI, blockchain security, and modern web technologies to transform outpatient department management.
 
-[![Made with Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-Express-green)](https://nodejs.org/)
 [![MySQL](https://img.shields.io/badge/Database-MySQL-blue)](https://www.mysql.com/)
 [![AI Powered](https://img.shields.io/badge/AI-OpenAI%20GPT--4-orange)](https://openai.com/)
