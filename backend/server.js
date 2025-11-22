@@ -59,6 +59,24 @@ io.on("connection", (socket) => {
   })
 })
 
+// Root endpoint
+app.get("/", (req, res) => {
+  res.json({ 
+    message: "Hospital OPD API", 
+    status: "running",
+    endpoints: {
+      health: "/health",
+      auth: "/api/auth",
+      patients: "/api/patients",
+      doctors: "/api/doctors",
+      appointments: "/api/appointments",
+      prescriptions: "/api/prescriptions",
+      slots: "/api/slots",
+      notifications: "/api/notifications"
+    }
+  })
+})
+
 // Health check endpoint
 app.get("/health", (req, res) => {
   res.json({ status: "Server is running" })
