@@ -139,30 +139,3 @@ export default function AnalyticsCharts({ stats }) {
     </div>
   )
 }
-          </ResponsiveContainer>
-        </div>
-      </div>
-
-      {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="backdrop-blur-xl bg-white/80 border border-white/20 rounded-2xl p-6">
-          <p className="text-gray-600 text-sm font-medium mb-2">Avg Appointments/Day</p>
-          <p className="text-3xl font-bold text-blue-600">{(stats.totalAppointments / 30).toFixed(1)}</p>
-          <p className="text-xs text-gray-600 mt-2">↑ 12% from last month</p>
-        </div>
-
-        <div className="backdrop-blur-xl bg-white/80 border border-white/20 rounded-2xl p-6">
-          <p className="text-gray-600 text-sm font-medium mb-2">Patient Satisfaction</p>
-          <p className="text-3xl font-bold text-green-600">4.7/5.0</p>
-          <p className="text-xs text-gray-600 mt-2">Based on 120 reviews</p>
-        </div>
-
-        <div className="backdrop-blur-xl bg-white/80 border border-white/20 rounded-2xl p-6">
-          <p className="text-gray-600 text-sm font-medium mb-2">System Uptime</p>
-          <p className="text-3xl font-bold text-purple-600">99.9%</p>
-          <p className="text-xs text-gray-600 mt-2">Last 30 days</p>
-        </div>
-      </div>
-    </div>
-  )
-}

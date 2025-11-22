@@ -102,17 +102,6 @@ export default function BillingReports() {
         <h3 className="text-lg font-bold text-gray-800 mb-4">Live Billing Summary</h3>
         <p className="text-gray-600">Showing real-time data from {billingData.appointments.length} appointments in the system.</p>
       </div>
-                  <p className="text-sm text-gray-600">{method.percentage}% of total</p>
-                </div>
-              </div>
-
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{ width: `${method.percentage}%` }}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   )
 }
