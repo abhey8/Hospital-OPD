@@ -13,11 +13,20 @@ export default function SlotManagement({ doctorId }) {
 
   const fetchSlots = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/doctors/${doctorId}/schedule`)
+      const token = getToken()
+      const response = await fetch(`${API_URL}/api/slots/doctor/${doctorId}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      
+      if (!response.ok) {
+        throw new Error("Failed to fetch slots")
+      }
+      
       const data = await response.json()
-      setSlots(data)
+      setSlots(Array.isArray(data) ? data : [])
     } catch (error) {
       console.error("Error fetching slots:", error)
+      setSlots([])
     } finally {
       setLoading(false)
     }
