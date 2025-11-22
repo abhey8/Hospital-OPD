@@ -48,11 +48,11 @@ export default function SignupForm() {
       localStorage.setItem("token", data.token)
       localStorage.setItem("user", JSON.stringify(data.user))
 
-      // Navigate to appropriate dashboard
+      // Use window.location for full page reload to ensure auth state is updated
       if (role === "PATIENT") {
-        navigate("/patient/dashboard")
+        window.location.href = "/patient/dashboard"
       } else if (role === "DOCTOR") {
-        navigate("/doctor/dashboard")
+        window.location.href = "/doctor/dashboard"
       }
     } catch (err) {
       setError("An error occurred during signup")

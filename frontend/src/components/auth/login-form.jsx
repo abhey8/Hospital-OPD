@@ -35,13 +35,13 @@ export default function LoginForm() {
       localStorage.setItem("token", data.token)
       localStorage.setItem("user", JSON.stringify(data.user))
 
-      // Navigate based on role
+      // Use window.location for full page reload to ensure auth state is updated
       if (data.user.role === "PATIENT") {
-        navigate("/patient/dashboard")
+        window.location.href = "/patient/dashboard"
       } else if (data.user.role === "DOCTOR") {
-        navigate("/doctor/dashboard")
+        window.location.href = "/doctor/dashboard"
       } else if (data.user.role === "ADMIN") {
-        navigate("/admin/dashboard")
+        window.location.href = "/admin/dashboard"
       }
     } catch (err) {
       setError("An error occurred during login")
