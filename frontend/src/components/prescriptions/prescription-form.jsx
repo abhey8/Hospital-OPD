@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import API_URL from "../../config/api"
 import { useAuth } from "../auth/use-auth"
 
 export default function PrescriptionForm({ patientId, appointmentId, onSuccess }) {
@@ -36,7 +37,7 @@ export default function PrescriptionForm({ patientId, appointmentId, onSuccess }
 
     try {
       const token = getToken()
-      const response = await fetch("http://localhost:3001/api/prescriptions", {
+      const response = await fetch(`${API_URL}/api/prescriptions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

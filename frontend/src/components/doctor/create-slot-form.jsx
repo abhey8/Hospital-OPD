@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import API_URL from "../../config/api"
 import { useAuth } from "../auth/use-auth"
 
 export default function CreateSlotForm({ doctorId, onSlotCreated }) {
@@ -25,7 +26,7 @@ export default function CreateSlotForm({ doctorId, onSlotCreated }) {
 
     try {
       const token = getToken()
-      const response = await fetch("http://localhost:3001/api/slots", {
+      const response = await fetch(`${API_URL}/api/slots`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

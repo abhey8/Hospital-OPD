@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import API_URL from "../../config/api"
 import { useAuth } from "../auth/use-auth"
 import CreateSlotForm from "./create-slot-form"
 
@@ -12,7 +13,7 @@ export default function SlotManagement({ doctorId }) {
 
   const fetchSlots = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/api/doctors/${doctorId}/schedule`)
+      const response = await fetch(`${API_URL}/api/doctors/${doctorId}/schedule`)
       const data = await response.json()
       setSlots(data)
     } catch (error) {
@@ -31,7 +32,7 @@ export default function SlotManagement({ doctorId }) {
   const handleDeleteSlot = async (slotId) => {
     try {
       const token = getToken()
-      const response = await fetch(`http://localhost:3001/api/slots/${slotId}`, {
+      const response = await fetch(`${API_URL}/api/slots/${slotId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       })

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useAuth } from "../auth/use-auth"
+import API_URL from "../../config/api"
 import PatientQueueCard from "./patient-queue-card"
 import SlotManagement from "./slot-management"
 
@@ -16,7 +17,7 @@ export default function DoctorDashboard() {
     const fetchDoctorData = async () => {
       try {
         const token = getToken()
-        const response = await fetch(`http://localhost:3001/api/doctors?userId=${user.id}`, {
+        const response = await fetch(`${API_URL}/api/doctors?userId=${user.id}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         const doctors = await response.json()
@@ -24,7 +25,7 @@ export default function DoctorDashboard() {
           setDoctor(doctors[0])
 
           // Fetch appointments
-          const appointmentsRes = await fetch(`http://localhost:3001/api/appointments?doctorId=${doctors[0].id}`, {
+          const appointmentsRes = await fetch(`${API_URL}/api/appointments?doctorId=${doctors[0].id}`, {
             headers: { Authorization: `Bearer ${token}` },
           })
           const appointmentsData = await appointmentsRes.json()

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import API_URL from "../../config/api"
 import { useAuth } from "../auth/use-auth"
 import InvoiceCard from "./invoice-card"
 import InvoiceDetail from "./invoice-detail"
@@ -16,7 +17,7 @@ export default function BillingHistory({ patientId }) {
     const fetchBills = async () => {
       try {
         const token = getToken()
-        const response = await fetch(`http://localhost:3001/api/bills?patientId=${patientId}`, {
+        const response = await fetch(`${API_URL}/api/bills?patientId=${patientId}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         const data = await response.json()

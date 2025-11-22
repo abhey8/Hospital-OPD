@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import API_URL from "../../config/api"
 import { useAuth } from "../auth/use-auth"
 
 export default function PatientQueueCard({ appointment, doctorId }) {
@@ -12,7 +13,7 @@ export default function PatientQueueCard({ appointment, doctorId }) {
     setUpdating(true)
     try {
       const token = getToken()
-      const response = await fetch(`http://localhost:3001/api/appointments/${appointment.id}/status`, {
+      const response = await fetch(`${API_URL}/api/appointments/${appointment.id}/status`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

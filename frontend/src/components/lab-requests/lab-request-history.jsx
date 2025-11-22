@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import API_URL from "../../config/api"
 import { useAuth } from "../auth/use-auth"
 
 export default function LabRequestHistory({ patientId }) {
@@ -13,7 +14,7 @@ export default function LabRequestHistory({ patientId }) {
     const fetchLabRequests = async () => {
       try {
         const token = getToken()
-        const response = await fetch(`http://localhost:3001/api/lab-requests?patientId=${patientId}`, {
+        const response = await fetch(`${API_URL}/api/lab-requests?patientId=${patientId}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         const data = await response.json()
