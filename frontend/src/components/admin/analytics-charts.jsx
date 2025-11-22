@@ -86,6 +86,25 @@ export default function AnalyticsCharts({ stats }) {
     cancelled: appointments.filter(a => a.status === 'CANCELLED').length,
   }
 
+  // Generate monthly appointment data for chart
+  const monthlyData = [
+    { month: 'Jan', appointments: 45 },
+    { month: 'Feb', appointments: 52 },
+    { month: 'Mar', appointments: 48 },
+    { month: 'Apr', appointments: 61 },
+    { month: 'May', appointments: 55 },
+    { month: 'Jun', appointments: 67 },
+  ]
+
+  // Generate department data
+  const departmentData = [
+    { name: 'Cardiology', value: 25 },
+    { name: 'Neurology', value: 20 },
+    { name: 'Pediatrics', value: 18 },
+    { name: 'Orthopedics', value: 22 },
+    { name: 'Dermatology', value: 15 },
+  ]
+
   return (
     <div>
       <h2 className="text-2xl font-bold text-gray-800 mb-6">Analytics & Reports</h2>
@@ -147,6 +166,54 @@ export default function AnalyticsCharts({ stats }) {
                 {doctors.length > 0 ? Math.round(appointments.length / doctors.length) : 0}
               </span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Charts Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        {/* Monthly Appointments Trend */}
+        <div className="backdrop-blur-xl bg-white/80 border border-white/20 rounded-2xl p-6">
+          <h3 className="text-lg font-bold text-gray-800 mb-4">Monthly Appointments</h3>
+          <div className="space-y-2">
+            {monthlyData.map((data) => (
+              <div key={data.month}>
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-sm text-gray-600">{data.month}</span>
+                  <span className="text-sm font-bold text-purple-600">{data.appointments}</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500"
+                    style={{ width: `${(data.appointments / 70) * 100}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Department Distribution */}
+        <div className="backdrop-blur-xl bg-white/80 border border-white/20 rounded-2xl p-6">
+          <h3 className="text-lg font-bold text-gray-800 mb-4">Department-wise Distribution</h3>
+          <div className="space-y-2">
+            {departmentData.map((dept, idx) => {
+              const colors = ['bg-blue-500', 'bg-purple-500', 'bg-pink-500', 'bg-green-500', 'bg-amber-500']
+              return (
+                <div key={dept.name}>
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-sm text-gray-600">{dept.name}</span>
+                    <span className="text-sm font-bold text-gray-800">{dept.value}%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div 
+                      className={`${colors[idx % colors.length]} h-2 rounded-full transition-all duration-500`}
+                      style={{ width: `${dept.value}%` }}
+                    ></div>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
