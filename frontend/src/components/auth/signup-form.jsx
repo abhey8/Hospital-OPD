@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import API_URL from "../../config/api"
 
 export default function SignupForm() {
@@ -162,9 +162,9 @@ export default function SignupForm() {
         <div className="mt-6 pt-6 border-t border-gray-200">
           <p className="text-center text-gray-600 text-sm">
             Already have an account?{" "}
-            <a href="/login" className="text-blue-600 font-semibold hover:underline">
-              Sign in here
-            </a>
+            <Link to="/login" className="text-blue-600 font-semibold hover:underline">
+              Log in here
+            </Link>
           </p>
         </div>
       </div>
