@@ -211,21 +211,12 @@ export default function UserManagement() {
                   </tr>
                 ))
               )}
-                      {user.status}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 flex gap-2">
-                    <button className="text-blue-600 hover:text-blue-700 font-semibold text-sm">Edit</button>
-                    <button className="text-red-600 hover:text-red-700 font-semibold text-sm">Delete</button>
-                  </td>
-                </tr>
-              ))}
             </tbody>
           </table>
         </div>
 
         <div className="px-6 py-4 bg-gray-50 text-sm text-gray-600 font-semibold">
-          Total: {filteredUsers.length} users
+          Total: {filter === "all" ? users.length : filter === "doctor" ? doctors.length : patients.length} {filter === "all" ? "users" : filter + "s"}
         </div>
       </div>
     </div>
