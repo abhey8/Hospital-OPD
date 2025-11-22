@@ -36,13 +36,7 @@ export default function LoginForm() {
       localStorage.setItem("user", JSON.stringify(data.user))
 
       // Use window.location for full page reload to ensure auth state is updated
-      if (data.user.role === "PATIENT") {
-        window.location.href = "/patient/dashboard"
-      } else if (data.user.role === "DOCTOR") {
-        window.location.href = "/doctor/dashboard"
-      } else if (data.user.role === "ADMIN") {
-        window.location.href = "/admin/dashboard"
-      }
+      window.location.href = "/dashboard"
     } catch (err) {
       setError("An error occurred during login")
     } finally {

@@ -49,11 +49,7 @@ export default function SignupForm() {
       localStorage.setItem("user", JSON.stringify(data.user))
 
       // Use window.location for full page reload to ensure auth state is updated
-      if (role === "PATIENT") {
-        window.location.href = "/patient/dashboard"
-      } else if (role === "DOCTOR") {
-        window.location.href = "/doctor/dashboard"
-      }
+      window.location.href = "/dashboard"
     } catch (err) {
       setError("An error occurred during signup")
     } finally {

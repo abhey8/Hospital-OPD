@@ -3,6 +3,7 @@ import express from "express"
 import bcrypt from "bcryptjs"
 import prisma from "../lib/db.js"
 import { generateToken } from "../lib/auth.js"
+import { authMiddleware } from "../middleware/auth.js"
 
 const router = express.Router()
 
@@ -82,6 +83,16 @@ router.post("/login", async (req, res) => {
   } catch (error) {
     console.error("Login error:", error)
     res.status(500).json({ error: "Login failed" })
+  }
+})
+
+// Verify token endpoint
+router.get("/verify", authMiddleware, async (req, res) => {
+  try {
+    // If authMiddleware passes, token is valid
+    res.json({ valid: true, userId: req.userId })
+  } catch (error) {
+    res.status(401).json({ valid: false })
   }
 })
 
