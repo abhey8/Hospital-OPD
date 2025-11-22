@@ -66,9 +66,13 @@ app.get("/health", (req, res) => {
 
 const PORT = process.env.PORT || 3001
 
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-  startReminderScheduler() // Reminder scheduler start karo
-})
+// Only start server if not in Vercel serverless environment
+if (process.env.VERCEL !== "1") {
+  server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+    startReminderScheduler() // Reminder scheduler start karo
+  })
+}
 
-export default { app, io }
+// Export for Vercel
+export default app
