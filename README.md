@@ -525,7 +525,7 @@ GitHub: @[abhey8](https://github.com/abhey8)
 Having issues? Found a bug? Have suggestions?
 
 •⁠  ⁠🐛 [Open an issue](https://github.com/Aashish-Jha-11/Hospital-OPD/issues)
-•⁠  ⁠💬 [Start a discussion](https://github.com/Aashish-Jha-11/Hospital-OPD/discussions)
+•⁠  ⁠💬 [Start a discussion](https://github.com/Aashish-Jha-11/Hospital-OPD/)
 •⁠  ⁠📧 Email: [your-email@example.com](mailto:your-email@example.com)
 
 ---
