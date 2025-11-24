@@ -1,11 +1,34 @@
 # 🏥 Hospital OPD Management System
 
-	⁠A revolutionary healthcare platform that combines cutting-edge AI, blockchain security, and modern web technologies to transform outpatient department management.
+A revolutionary healthcare platform that combines cutting-edge AI, blockchain security, and modern web technologies to transform outpatient department management.
+
+<div align="center">
 
 [![Node.js](https://img.shields.io/badge/Node.js-Express-green)](https://nodejs.org/)
 [![MySQL](https://img.shields.io/badge/Database-MySQL-blue)](https://www.mysql.com/)
 [![AI Powered](https://img.shields.io/badge/AI-OpenAI%20GPT--4-orange)](https://openai.com/)
 [![Blockchain](https://img.shields.io/badge/Blockchain-Secured-purple)](https://ethereum.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Aashish-Jha-11/Hospital-OPD/pulls)
+
+</div>
+
+---
+
+## 📚 Table of Contents
+
+- [🌟 What Makes This Special?](#-what-makes-this-special)
+- [🎯 Core Modules](#-core-modules)
+- [🛠️ Tech Stack](#%EF%B8%8F-tech-stack)
+- [📁 Database Schema](#-database-schema-highlights)
+- [🚀 Getting Started](#-getting-started)
+- [🎨 Features Showcase](#-features-showcase)
+- [📱 Progressive Web App](#-progressive-web-app-features)
+- [🎯 Development Roadmap](#-12-week-development-roadmap)
+- [🏆 What Sets This Apart](#-what-sets-this-apart)
+- [🚀 Deployment](#-deployment)
+- [🤝 Contributing](#-contributing)
+- [👨‍💻 Developers](#-developer)
 
 ---
 
@@ -102,7 +125,7 @@ React Speech Kit    // Voice recognition
  ⁠
 
 ### Backend Powerhouse
-⁠ javascript
+```javascript
 Node.js + Express   // RESTful API server
 Prisma ORM          // Type-safe database queries
 MySQL               // Reliable data storage
@@ -113,7 +136,7 @@ Twilio              // SMS & WhatsApp
 JWT                 // Secure authentication
 Bcrypt              // Password encryption
 Helmet              // Security headers
- ⁠
+```
 
 ### Revolutionary Add-ons
 ⁠ javascript
@@ -181,8 +204,8 @@ cd ../backend
 npm install
  ⁠
 
-3.⁠ ⁠*Environment setup*
-⁠ bash
+3. **Environment setup**
+```bash
 # Backend .env
 DATABASE_URL="mysql://user:password@localhost:3306/hospital_opd"
 JWT_SECRET="your-secret-key"
@@ -195,7 +218,7 @@ TWILIO_AUTH_TOKEN="your-twilio-token"
 # Frontend .env.local
 NEXT_PUBLIC_API_URL="http://localhost:3001"
 NEXT_PUBLIC_VAPID_KEY="your-vapid-public"
- ⁠
+```
 
 4.⁠ ⁠*Database setup*
 ⁠ bash
@@ -217,10 +240,10 @@ cd backend && nodemon server.js
 cd frontend && npm run dev
  ⁠
 
-6.⁠ ⁠*Access the application*
-•⁠  ⁠Frontend: ⁠ http://localhost:3000 ⁠
-•⁠  ⁠Backend API: ⁠ http://localhost:3001 ⁠
-•⁠  ⁠API Documentation: ⁠ http://localhost:3001/api-docs ⁠
+6. **Access the application**
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:3001`
+- API Documentation: `http://localhost:3001/api-docs`
 
 ---
 
@@ -463,19 +486,19 @@ npm start
 ## 🎤 Demo Strategy
 
 ### 5-Minute Demo Flow
-1.⁠ ⁠*Problem Statement* (30s): Healthcare inefficiencies
-2.⁠ ⁠*AI Chatbot Demo* (90s): Live medical queries with GPT-4
-3.⁠ ⁠*Voice Prescription* (60s): Doctor dictation in action
-4.⁠ ⁠*Video Consultation* (90s): WebRTC telemedicine showcase
-5.⁠ ⁠*Security Features* (30s): Blockchain highlights
+1. **Problem Statement** (30s): Healthcare inefficiencies and patient data security concerns
+2. **AI Chatbot Demo** (90s): Live medical queries with GPT-4 integration
+3. **Voice Prescription** (60s): Doctor dictation in action with drug interaction warnings
+4. **Video Consultation** (90s): WebRTC telemedicine showcase with screen sharing
+5. **Security Features** (30s): Blockchain implementation highlights
 
-### Key Talking Points
-•⁠  ⁠🎯 Microservices scalability
-•⁠  ⁠🤖 AI integration with OpenAI GPT-4
-•⁠  ⁠🔐 Blockchain security implementation
-•⁠  ⁠📱 PWA offline healthcare access
-•⁠  ⁠⚡ Real-time communication protocols
-•⁠  ⁠🏥 Solving actual healthcare problems
+### 💯 Key Talking Points
+- 🎯 Microservices scalability for enterprise-level deployment
+- 🤖 AI integration with OpenAI GPT-4 for intelligent healthcare assistance
+- 🔐 Blockchain security implementation for immutable medical records
+- 📱 PWA offline healthcare access with service worker caching
+- ⚡ Real-time communication protocols using Socket.io
+- 🏭 Solving actual healthcare problems with modern technology
 
 ---
 
@@ -483,11 +506,18 @@ npm start
 
 We welcome contributions! Whether you're fixing bugs, adding features, or improving documentation:
 
-1.⁠ ⁠Fork the repository
-2.⁠ ⁠Create your feature branch (⁠ git checkout -b feature/AmazingFeature ⁠)
-3.⁠ ⁠Commit your changes (⁠ git commit -m 'Add some AmazingFeature' ⁠)
-4.⁠ ⁠Push to the branch (⁠ git push origin feature/AmazingFeature ⁠)
-5.⁠ ⁠Open a Pull Request
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### 📝 Contribution Guidelines
+- Follow the existing code style and conventions
+- Write meaningful commit messages
+- Add tests for new features
+- Update documentation as needed
+- Ensure all tests pass before submitting PR
 
 ---
 
@@ -497,28 +527,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 👨‍💻 Developer
+## 👨‍💻 Developers
 
-*Aashish Jha*  
+**Aashish Jha**  
 GitHub: [@Aashish-Jha-11](https://github.com/Aashish-Jha-11)
 
-*Subham Sangwan*  
+**Subham Sangwan**  
 GitHub: [@Subham-KRLX](https://github.com/Subham-KRLX)
 
-*Harikrushn*  
+**Harikrushn**  
 GitHub: [@Harikrushn9118](https://github.com/Harikrushn9118)
 
-*Abhey Dua*  
-GitHub: @[abhey8](https://github.com/abhey8)
+**Abhey Dua**  
+GitHub: [@abhey8](https://github.com/abhey8)
 
 ---
 
 ## 🙏 Acknowledgments
 
-•⁠  ⁠OpenAI for GPT-4 API
-•⁠  ⁠Web3 Foundation for blockchain resources
-•⁠  ⁠The amazing open-source community
-•⁠  ⁠Healthcare professionals who provided domain insights
+- OpenAI for GPT-4 API
+- Web3 Foundation for blockchain resources
+- The amazing open-source community
+- Healthcare professionals who provided domain insights
 
 ---
 
@@ -526,9 +556,9 @@ GitHub: @[abhey8](https://github.com/abhey8)
 
 Having issues? Found a bug? Have suggestions?
 
-•⁠  ⁠🐛 [Open an issue](https://github.com/Aashish-Jha-11/Hospital-OPD/issues)
-•⁠  ⁠💬 [Start a discussion](https://github.com/Aashish-Jha-11/Hospital-OPD/)
-•⁠  ⁠📧 Email: [your-email@example.com](mailto:your-email@example.com)
+- 🐛 [Open an issue](https://github.com/Aashish-Jha-11/Hospital-OPD/issues)
+- 💬 [Start a discussion](https://github.com/Aashish-Jha-11/Hospital-OPD/discussions)
+- 📧 Email: contact@hospital-opd.com
 
 ---
 
