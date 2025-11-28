@@ -5,7 +5,7 @@ A revolutionary healthcare platform that combines cutting-edge AI, blockchain se
 <div align="center">
 
 [![Node.js](https://img.shields.io/badge/Node.js-Express-green)](https://nodejs.org/)
-[![MySQL](https://img.shields.io/badge/Database-MySQL-blue)](https://www.mysql.com/)
+
 [![AI Powered](https://img.shields.io/badge/AI-OpenAI%20GPT--4-orange)](https://openai.com/)
 [![Blockchain](https://img.shields.io/badge/Blockchain-Secured-purple)](https://ethereum.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
