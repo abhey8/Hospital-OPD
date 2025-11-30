@@ -176,9 +176,43 @@ export default function HomePage() {
       </div>
 
       {/* Footer */}
-      <footer className="backdrop-blur-xl bg-white/80 border-t border-white/20 py-8">
-        <div className="max-w-7xl mx-auto px-6 text-center text-gray-600">
-          <p>&copy; 2025 MediHub - Hospital OPD Management System. All rights reserved.</p>
+      <footer className="backdrop-blur-xl bg-white/80 border-t border-white/20 py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h3 className="font-bold text-gray-800 mb-4">MediHub</h3>
+              <p className="text-sm text-gray-600">
+                Revolutionizing healthcare management with AI and Blockchain technology.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-4">Company</h4>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><Link to="/about" className="hover:text-blue-600 transition">About Us</Link></li>
+                <li><Link to="/contact" className="hover:text-blue-600 transition">Contact</Link></li>
+                <li><Link to="/careers" className="hover:text-blue-600 transition">Careers</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-4">Legal</h4>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><Link to="/privacy" className="hover:text-blue-600 transition">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-blue-600 transition">Terms of Service</Link></li>
+                <li><Link to="/cookie-policy" className="hover:text-blue-600 transition">Cookie Policy</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-4">Connect</h4>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#" className="hover:text-blue-600 transition">Twitter</a></li>
+                <li><a href="#" className="hover:text-blue-600 transition">LinkedIn</a></li>
+                <li><a href="#" className="hover:text-blue-600 transition">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-200 pt-8 text-center text-gray-600 text-sm">
+            <p>&copy; 2025 MediHub - Hospital OPD Management System. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>

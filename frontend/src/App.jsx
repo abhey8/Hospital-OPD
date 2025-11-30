@@ -2,6 +2,10 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './components/auth/use-auth';
 
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsPage from './pages/TermsPage';
 import LoginForm from './components/auth/login-form';
 import SignupForm from './components/auth/signup-form';
 import PatientDashboard from './components/patient/patient-dashboard';
@@ -23,22 +27,26 @@ function App() {
     <Routes>
       {/* Public pages */}
       <Route path="/" element={!user ? <HomePage /> : <Navigate to="/dashboard" />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsPage />} />
       <Route path="/login" element={!user ? <LoginForm /> : <Navigate to="/dashboard" />} />
       <Route path="/signup" element={!user ? <SignupForm /> : <Navigate to="/dashboard" />} />
 
       {/* Dashboard - role ke hisaab se */}
-      <Route 
-        path="/dashboard" 
+      <Route
+        path="/dashboard"
         element={
           user ? (
             user.role === 'PATIENT' ? <PatientDashboard /> :
-            user.role === 'DOCTOR' ? <DoctorDashboard /> :
-            user.role === 'ADMIN' ? <AdminDashboard /> :
-            <Navigate to="/login" />
+              user.role === 'DOCTOR' ? <DoctorDashboard /> :
+                user.role === 'ADMIN' ? <AdminDashboard /> :
+                  <Navigate to="/login" />
           ) : (
             <Navigate to="/login" />
           )
-        } 
+        }
       />
 
       {/* Baaki sab routes home pe redirect */}
